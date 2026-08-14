@@ -1,26 +1,26 @@
-const capitalise = (string) => {
+export const capitalise = (string) => {
     string = string.split(" ")
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
     return string;
 }
 
-const truncate = (string, length) => {
+export const truncate = (string, length) => {
     string = string.slice(0, length);
     return string;
 }
 
-const camelCase = (string) => {
+export const camelCase = (string) => {
     string = string.toLowerCase().split(" ");
     string = string[0] + string.slice(1).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("");
     return string;
 }
 
-const reverse = (string) => {
+export const reverse = (string) => {
     return string.split("").reverse().join("");
 }
 
-const isPalindrome = (string) => {
+export const isPalindrome = (string) => {
     const reversed = reverse(string);
     return string === reversed;
 }
